@@ -4,12 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsolePlus
+namespace ConsolePlus.Exceptions
 {
-    class Program
+    public class InterruptedInputException : Exception
     {
-        static void Main(string[] args)
-        {
-        }
     }
 }
