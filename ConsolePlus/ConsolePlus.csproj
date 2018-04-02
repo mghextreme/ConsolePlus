@@ -44,6 +44,9 @@
     <Compile Include="ConsolePlusTheme.cs" />
     <Compile Include="Exceptions\InterruptedInputException.cs" />
     <Compile Include="Extensions\ConsoleKeyInfoExtensions.cs" />
+    <Compile Include="Graphics\ConsoleBlock.cs" />
+    <Compile Include="Graphics\ConsoleLine.cs" />
+    <Compile Include="Graphics\ConsoleText.cs" />
     <Compile Include="IConsole.cs" />
     <Compile Include="KeyPressEventArgs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

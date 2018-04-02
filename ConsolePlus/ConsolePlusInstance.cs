@@ -1,5 +1,6 @@
 ﻿using ConsolePlus.Exceptions;
 using ConsolePlus.Extensions;
+using ConsolePlus.Graphics;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,8 @@ namespace ConsolePlus
     public class ConsolePlusInstance : IConsole
     {
         #region Properties
+
+        ConsoleQueue block;
 
         public string Title => Console.Title;
 
@@ -98,6 +101,12 @@ namespace ConsolePlus
         {
             SortedSet<string> sortedOptions = new SortedSet<string>(options);
 
+            return string.Empty;
+        }
+
+        // [ToDo]
+        public string ReadSecret()
+        {
             return string.Empty;
         }
 

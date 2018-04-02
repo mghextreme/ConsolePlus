@@ -11,6 +11,8 @@ namespace ConsolePlus
 
         string ReadAutoComplete(string[] options, bool restrictToOptions = false);
 
+        string ReadSecret();
+
         void Write(char character);
 
         void Write(string text);
