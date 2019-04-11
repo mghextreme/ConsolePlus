@@ -41,7 +41,7 @@ namespace ConsolePlus
 
         #endregion
 
-        #region Public methods
+        #region Constructors
 
         public ConsolePlusInstance()
         {
@@ -52,6 +52,10 @@ namespace ConsolePlus
 
             SetTheme(ConsolePlusTheme.Default);
         }
+
+        #endregion
+
+        #region Public methods
 
         public ConsoleKeyInfo ReadKey()
         {

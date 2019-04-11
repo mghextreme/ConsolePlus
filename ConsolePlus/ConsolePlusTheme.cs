@@ -6,11 +6,41 @@ using System.Threading.Tasks;
 
 namespace ConsolePlus
 {
-    public class ConsolePlusTheme
+    /// <summary>
+    /// A color theme for the console.
+    /// </summary>
+    public class ConsolePlusTheme : IComparable, IComparable<ConsolePlusTheme>, IEquatable<ConsolePlusTheme>
     {
         public ConsoleColor ForegroundColor { get; set; }
 
         public ConsoleColor BackgroundColor { get; set; }
+
+        #region Interfaces
+
+        public int CompareTo(object obj)
+        {
+            var cpt = obj as ConsolePlusTheme;
+            if (cpt == null)
+                return 1;
+            
+            return CompareTo(cpt);
+        }
+
+        public int CompareTo(ConsolePlusTheme other)
+        {
+            int foreCompare = BackgroundColor.CompareTo(other.BackgroundColor);
+            if (foreCompare != 0)
+                return foreCompare;
+            
+            return ForegroundColor.CompareTo(other.ForegroundColor);
+        }
+
+        public bool Equals(ConsolePlusTheme other)
+        {
+            return CompareTo(other) == 0;
+        }
+
+        #endregion
 
         #region Static Themes
 
