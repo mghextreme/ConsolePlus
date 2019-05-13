@@ -18,14 +18,10 @@ namespace ConsolePlus.Extensions
         /// <returns>True if it is a number key</returns>
         public static bool IsNumber(this ConsoleKeyInfo keyInfo)
         {
-            int keyCode = (int)keyInfo.Key;
+            int keyChar = (int)keyInfo.KeyChar;
 
-            // Numbers on top of letters
-            if (keyCode >= 48 && keyCode < 58)
-                return true;
-
-            // NumPad numbers
-            if (keyCode >= 96 && keyCode < 106)
+            // Numbers
+            if (keyChar >= 48 && keyChar < 58)
                 return true;
 
             return false;
